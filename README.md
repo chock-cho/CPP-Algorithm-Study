@@ -1,12 +1,12 @@
-![image](![image](https://github.com/CPP-Algorithm-Study/CPP-Algorithm-Study/assets/52192706/0ba837fb-05bf-43c8-93c5-f4fa885ab26d)
-)
+<img src="https://github.com/CPP-Algorithm-Study/CPP-Algorithm-Study/assets/52192706/20409de7-b4a4-4a00-87a1-29206e5c6129">
+
 
 # C++을 이용한 Algorithm Study
 ### 💻 참여자
 
 |[이채리](https://github.com/official-Cherry)|[이현정](https://github.com/Hyun2gi)|[신수정](https://github.com/chock-cho)|[한다현](https://github.com/ekgus9701)|
 |:---:|:---:|:---:|:---:|
-|<img src="https://github.com/CPP-Algorithm-Study/CPP-Algorithm-Study/assets/52192706/a34a6c2f-6fbf-4569-823a-84d65e71c4c3" width="100%" height="100%"> |<img src="https://github.com/CPP-Algorithm-Study/CPP-Algorithm-Study/assets/52192706/06faf9dc-13da-40da-9817-c33dc52e372d" width="100%" height="100%"> |<img src="https://github.com/CPP-Algorithm-Study/CPP-Algorithm-Study/assets/52192706/1e0ff66b-fd22-41cb-bd64-14e84f21bfdc" width="100%" height="100%"> |<img src="https://github.com/CPP-Algorithm-Study/CPP-Algorithm-Study/assets/52192706/7897347d-f476-4a52-aa4c-e9dacc4e1c29" width="100%" height="100%">|
+|![채리](https://github.com/CPP-Algorithm-Study/CPP-Algorithm-Study/assets/52192706/172738c5-59c4-4b8a-9a5f-9db7dc22c522) |![현정](https://github.com/CPP-Algorithm-Study/CPP-Algorithm-Study/assets/52192706/dc36d2b1-71b3-41c5-b036-167b7867839b) |![촉초](https://github.com/CPP-Algorithm-Study/CPP-Algorithm-Study/assets/52192706/158565cf-d391-4228-9cd3-4293cd1d261e)|![52192706](https://github.com/CPP-Algorithm-Study/CPP-Algorithm-Study/assets/52192706/dd383f39-f28d-4c20-a38a-da970070d25e)|
 
 ### ✅ 진행 방식
 1. 매주 월요일까지 미리 정해둔 5문제를 풀고 코드 리뷰를 진행한다.
