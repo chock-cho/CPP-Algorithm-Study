@@ -1,4 +1,5 @@
-![image](https://github.com/CPP-Algorithm-Study/CPP-Algorithm-Study/assets/52192706/0eb4d868-a232-4cc9-a99e-93e0efeda8b2)
+![image](![image](https://github.com/CPP-Algorithm-Study/CPP-Algorithm-Study/assets/52192706/0ba837fb-05bf-43c8-93c5-f4fa885ab26d)
+)
 
 # C++을 이용한 Algorithm Study
 ### 💻 참여자
