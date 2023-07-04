@@ -13,6 +13,6 @@ long long solution(int n) {
     }
     
     answer=dp[n-1];
-    
+
     return answer;
 }
