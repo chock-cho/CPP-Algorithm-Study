@@ -13,9 +13,8 @@ vector<int> solution(string s) {
             else zeros++; // 제거된 0개수 
         }
         
-        // 이진변환 (원래는 reverse 해줘야하지만 개수만 구하면 되기 때문에 상관없음)
         s="";
-        while(val>0){
+        while(val>0){    // 이진변환 (원래는 reverse 해줘야하지만 개수만 구하면 되기 때문에 상관없음)
             if(val%2==0) s+="0";
             else s+="1";
             val/=2;
