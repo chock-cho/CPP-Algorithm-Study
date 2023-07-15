@@ -1,0 +1,36 @@
+#include <string>
+#include <vector>
+#include<algorithm>
+
+using namespace std;
+
+int cmp(int a, int b) {
+    return a > b;
+}
+
+int solution(vector<int> citations) {
+    int answer = 0;
+    //내림차순
+    sort(citations.begin(),citations.end(),cmp);
+    
+    //최대값에서 출발
+    int i= citations[0];
+    while(i >= 0){
+        int index = 0;
+        int hindex = 0;
+        
+        //while문으로 돌면서 개수 체크
+        while(i <= citations[index] ) {
+            hindex++;
+            index++;
+        }
+        
+        //개수 많을 경우에는 답
+        if(hindex >= i) {
+            answer = i;
+            break;
+        }
+        i--;
+    }
+    return answer;
+}
