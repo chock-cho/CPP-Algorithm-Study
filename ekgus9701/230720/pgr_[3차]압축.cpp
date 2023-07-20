@@ -32,6 +32,7 @@ vector<int> solution(string msg) {
             dic.emplace(w+c,add++); //다음글자 등록
             w=c; //현재입력 업데이트
         }
+        
         cur++;
     }
     
