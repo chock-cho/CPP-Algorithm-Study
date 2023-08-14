@@ -1,9 +1,22 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <sstream>
 
 using namespace std;
 
+// 문자열을 구분자 delimiter 기준으로 자른 토큰들을 반환
+vector<string> split(const string &s, char delimiter) {
+    vector<string> tokens;
+    string token;
+    istringstream tokenStream(s);
+    
+    while (getline(tokenStream, token, delimiter)) {
+        tokens.push_back(token);
+    }
+    
+    return tokens;
+}
 
 // 양의 정수 n 을 k 진수로 바꿔주는 함수 
 string toBaseK(int n, int k){
@@ -35,45 +48,21 @@ bool isPrime(long long n){
 }
 
 // 0 의 위치를 마킹하고 그 사이사이에 있는 숫자들이 소수인지 판단
+// x 0 a 0 b 0 c 0 
 int check(string number){
     
-    int cnt =0;
+ 
+    int cnt=0;
+    vector<string> tokens = split(number,'0');
 
-    // 0 이 존재하는 인덱스 마킹
-    vector<int> zero;
-    
-    for(int i=0;i<number.size();i++){
+    for(int i=0;i<tokens.size();i++){
         
-        if(number[i]=='0'){
-            zero.push_back(i);
-        } 
-    }
-    
-    int start = -1;
-    int end = 0;
-    // start ~ end 까지의 문자열이 소수인지 확인
-    for(int i=0;i<zero.size()+1;i++){
-        
-        if(i!=0){
-            start=zero[i-1];
-        }
-        end = zero[i];
-        
-    	if(i==zero.size()){
-            end=number.size();
-            
-        }
-        
-        if((end-start-1)<=0)
+        if(tokens[i]==""){
             continue;
-        
-            string sub_str = number.substr(start+1,end-start-1);
-                
-            if(isPrime(stol(sub_str))){ // 주어진 수가 소수라면
-                cnt++;
-            }
-            
-        
+        }
+        if(isPrime(stol(tokens[i]))){
+            cnt++;
+        }
         
      
     }
@@ -85,7 +74,7 @@ int check(string number){
 https://school.programmers.co.kr/learn/courses/30/lessons/92335
 
 1. 주어진 숫자 n 을 k진수로 바꾼다.
-2. 0 사이사이에 있는 숫자들이 소수인지 판단하고 그 개수를 센다.
+2. 0 을 구분자로 하여 k 진수로 변환된 숫자를 쪼갠다.
 
 < 문제 풀 때 주의할 점 >
 
@@ -99,15 +88,11 @@ n 을 k 진수로 바꾸었을 때 최댓값은?
 => 2 ~ n 의 제곱근 까지 나눠주기
 
 */
-
 int solution(int n, int k) {
     int answer = -1;
     
-    
     string nToBaseK = toBaseK(n,k);
-     
     answer = check(nToBaseK);
-    
     
     return answer;
 }
