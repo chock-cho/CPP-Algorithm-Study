@@ -20,8 +20,6 @@ string n_to_k (long long n,long long k){
     
     string result;
 
-    if(k==0) result = to_string(n);
-
     while(n){
         result+=to_string(n%k);
         n/=k;
