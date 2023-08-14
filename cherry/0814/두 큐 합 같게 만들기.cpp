@@ -16,9 +16,7 @@ using namespace std;
 2. 추출된 원소를 다른 큐에 insert 함
 3. 각 큐의 원소 합이 같도록 만들기
 
-유의
-- 큐는 FIFO 방식
-
+유의 - 큐는 FIFO 방식
 */
 
 int solution(vector<int> queue1, vector<int> queue2) {
