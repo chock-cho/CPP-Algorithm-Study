@@ -60,13 +60,7 @@ int solution(int n, int k) {
     string changed = n_to_k(n,k);
 
     // 0을 기준으로 숫자 나누기
-    vector<string> temp = split(changed,"0");
-    vector<string> substr;
-    
-    for(string s : temp){
-        // k진법에서 소수 판별
-        if(isPrime(stoull(s))) substr.push_back(s);
-    }
+    vector<string> substr = split(changed,"0");
 
     for(string s : substr){
         // 10진법에서 소수 판별
