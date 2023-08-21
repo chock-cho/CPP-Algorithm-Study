@@ -1,31 +1,50 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <iostream>
 
 using namespace std;
 
-int convertTime(const string s)
+
+typedef pair<int,int> ci;
+
+int convertToInt(string s,string type)
 {
-    return stoi(s.substr(0,2)) * 60 + stoi(s.substr(3));
+    int hour = stoi(s.substr(0, 2));
+    int minute = stoi(s.substr(3, 2));
+    
+    
+    if(type=="end"){
+        return hour * 60 + minute+10;
+    }
+
+    return hour * 60 + minute;
 }
+/*
+호텔 대실
+
+*/
 int solution(vector<vector<string>> book_time) {
-    int answer = 0;
-
-    vector<pair<int,int>> timeTable;
-
-    for(const auto& v : book_time)
+    vector<ci> v;
+    
+    for (vector<string> time : book_time)
     {
-        timeTable.emplace_back(convertTime(v[0]),1);
-        timeTable.emplace_back(convertTime(v[1]) + 10,-1);
+        int start = convertToInt(time[0],"start");
+        int end = convertToInt(time[1],"end");
+        
+        v.push_back({start, 1}); // 회의가 시작하므로 +1
+        v.push_back({end, -1}); // 회의가 종료되므로 -1
     }
-    sort(timeTable.begin(),timeTable.end()); // 시작시간이 빠른 순서대로 정렬 
-
-    int cur = 0;
-    for(const auto& v : timeTable)
-    {
-        cur += v.second;
-        answer = max(answer,cur);
+    
+    sort(v.begin(), v.end()); // 시작시간 기준 정렬
+    
+    int cnt = 0; //현재 동시에 진행중인 회의 개수 
+    int answer = 1;
+    for(int i=0;i<vx.size();i++){
+        
+        cnt+= v[i].second;
+        answer = max(cnt, answer);
     }
-
+  
     return answer;
 }
