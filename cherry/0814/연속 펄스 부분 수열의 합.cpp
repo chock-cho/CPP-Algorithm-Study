@@ -45,16 +45,14 @@ long long solution(vector<int> sequence) {
     
     /*dp 적용*/  
 
-    // 1로 시작
+    // 1, -1 로 시작
     for(int i=1;i<length;i++){
+        
         dp_plus[i] = max(dp_plus[i-1]+seq_plus[i],seq_plus[i]);
-        answer = max(answer,dp_plus[i]);
-    }
-    
-    // -1로 시작
-    for(int i=1;i<length;i++){
         dp_minus[i] = max(dp_minus[i-1]+seq_minus[i],seq_minus[i]);
-        answer = max(answer,dp_minus[i]);
+
+        long long temp = max(dp_minus[i],dp_plus[i]);
+        answer = max(answer,temp);
     }
     
     return answer;
