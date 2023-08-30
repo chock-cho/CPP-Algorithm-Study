@@ -11,7 +11,6 @@ using namespace std;
 내용 : 자신보다 뒤에 있는 숫자 중에서 자신보다 크면서 가장 가까이 있는 수를 뒷 큰수
 
 처음시도 :  이중for문 -> 시간초과
-
 */
 
 vector<int> solution(vector<int> numbers) {
@@ -29,9 +28,7 @@ vector<int> solution(vector<int> numbers) {
             s.pop();
 
         }
-
         s.push(make_pair(numbers[i],i));
     }
-
     return answer;
 }
