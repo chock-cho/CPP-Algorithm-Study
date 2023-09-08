@@ -23,7 +23,7 @@ int solution(int storey) {
         
         else if(namoji==5){
            
-            if(mok%10==9||mok%10==5){ //95의 경우 5를 더하는게 나음 , 5555의 경우 5를 더하는게 나음
+            if(mok%10>=5){ //앞이 자리수가 5보다 크다면 5를 더해주는게 나음
                 cnt+=10-namoji;
                 mok+=1;
             }
