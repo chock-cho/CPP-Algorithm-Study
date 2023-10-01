@@ -5,7 +5,7 @@
 
 using namespace std;
 
-bool sosu(int num){ //소수인지 여부 판단
+bool sosu(int num){ //소수인지 여부 판단 
    
     if(num<=1) return false;
     for(int i=num-1;i>=2;i--){
